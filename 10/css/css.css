@@ -1,0 +1,40 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+html{
+	box-sizing: border-box;
+}
+*,*::after,*::before{
+	box-sizing: inherit;
+}
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+header,footer{
+	border: 1px solid #7E5535;
+	height: 150px;
+	margin: 10px 0;
+}
+#center{
+	width: 1200px;
+	margin: auto;
+}
+aside{
+	width: 20%;
+	min-height: 500px;
+	border: 1px solid #7E5535;
+	float: left;	
+}
+main{
+	border: 1px solid #7E5535;
+	width: 58%;
+	float: left;
+	margin:0 1%;
+	min-height: 500px;
+}
+h1{
+	text-align: center;
+}
