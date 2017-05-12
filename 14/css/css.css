@@ -1,0 +1,36 @@
+body{
+	background: lightcyan;
+}
+form{
+	width: 400px;
+	height: 300px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background:white ;
+	box-shadow: 0 0 10px 2px rgba(0,0,0,.4);
+	text-align: center;
+}
+form input{
+	margin: 10px 0;
+	width: 75%;
+	height: 30px;
+	border: none;
+	outline: none;
+	border: 1px dashed lightblue;
+	text-indent: 1em;
+}
+form input:hover{
+	box-shadow: inset 0 0 5px 0px rgba(0,0,0,.4);
+	
+}
+form input[type="submit"]{
+	width: 50%;
+	height: 40px;
+	text-indent:0 ;
+	cursor: pointer;
+	box-shadow: 0 0 5px 0px rgba(0,0,0,.4);
+}
