@@ -1,12 +1,21 @@
+*{
+	box-sizing: border-box;
+}
 .clearfix::after{
 	content: "";
 	display: table;
 	clear: both;
 }
-header{
-	width: 1200px;
+body{
+	width: 1000px;
 	margin: auto;
+	min-height: 1200px;
+}
+header{
 	position: relative;
+}
+p,h2{
+	color: #fff;
 }
 ul{
 	list-style-type: none;
@@ -41,5 +50,54 @@ nav{
 }
 body{
 	background: url(../img/pexels-photo-258136.jpeg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 	background-size: 100%;
 }
+.interest li a{
+	float: left;
+	margin: 10px 30px;
+	width: 140px;
+	height:40px;
+	background: rgba(86,181,227,.6) ;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 10px;
+	transition: background-color .5s;
+}
+.interest li a:hover{
+	background: rgba(86,181,227,.9) ;
+}
+ figure {
+	float: left;
+	width: 30%;
+	overflow: hidden;
+	margin: calc(10%/6);
+	box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+	position: relative;
+}
+ figure img{
+	width: 100%;
+	vertical-align: top;
+	transition: all .5s;
+}
+ figure:hover img{
+	cursor: pointer;
+}
+figure figcaption{
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+	height: 20px;
+	color: #fff;
+	opacity: 0;
+	margin: auto;
+	transition: opacity .5s; 
+}
+figure:hover figcaption{
+	opacity: 1;
+}
+
