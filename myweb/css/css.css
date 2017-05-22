@@ -10,6 +10,10 @@ body{
 	width: 1000px;
 	margin: auto;
 	min-height: 1200px;
+	background: url(../img/pexels-photo-258136.jpeg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 header{
 	position: relative;
@@ -48,15 +52,15 @@ nav{
 	border: 1px solid #fff;
 	color: black;
 }
-body{
-	background: url(../img/pexels-photo-258136.jpeg);
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: 100%;
+section{
+	margin: 40px 0;
 }
-.interest li a{
+section h2{
+	margin-bottom: 0;
+}
+.interest li{
 	float: left;
-	margin: 10px 30px;
+	margin: 20px 30px 0 30px;
 	width: 140px;
 	height:40px;
 	background: rgba(86,181,227,.6) ;
@@ -65,7 +69,12 @@ body{
 	border-radius: 10px;
 	transition: background-color .5s;
 }
-.interest li a:hover{
+.interest li a{
+	display: block;
+	width: 140px;
+	height: 40px;
+}
+.interest li:hover{
 	background: rgba(86,181,227,.9) ;
 }
  figure {
@@ -99,5 +108,31 @@ figure figcaption{
 }
 figure:hover figcaption{
 	opacity: 1;
+}
+dt{
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	background: #fff;
+	text-align: center;
+}
+dd{
+	display: inline-block;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	background: #000;
+	text-align: center;
+	margin: 0 40px 0 5px;
+	color: #fff;
+}
+input,select{
+	width: 32%;
+	height: 40px;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	text-indent: 1em;
 }
 
