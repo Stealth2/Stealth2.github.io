@@ -34,6 +34,12 @@ nav{
 	top: 0px;
 	right: 0px;
 }
+header h2{
+	font-size: 30px;
+}
+header p{
+	font-size: 19px;
+}
 .logo img{
 	width: 80px;
 	height: auto;
@@ -67,7 +73,7 @@ section h2{
 	text-align: center;
 	line-height: 40px;
 	border-radius: 10px;
-	transition: background-color .5s;
+	transition: background-color .5s,border-radius .5s;
 }
 .interest li a{
 	display: block;
@@ -76,6 +82,7 @@ section h2{
 }
 .interest li:hover{
 	background: rgba(86,181,227,.9) ;
+	border-radius: 0;
 }
  figure {
 	float: left;
@@ -116,6 +123,7 @@ dt{
 	line-height: 30px;
 	background: #fff;
 	text-align: center;
+	border-radius: 4px;
 }
 dd{
 	display: inline-block;
@@ -126,6 +134,7 @@ dd{
 	text-align: center;
 	margin: 0 40px 0 5px;
 	color: #fff;
+	border-radius: 4px;
 }
 input,select{
 	width: 32%;
@@ -134,5 +143,34 @@ input,select{
 	outline: none;
 	border-radius: 4px;
 	padding-left: 1em;
+	margin-bottom: 20px;
+}
+textarea,input[type="submit"]{
+	width: 48%;
+	height: 40px;
+	cursor: pointer;
+	vertical-align: top;
+	border-radius: 5px;
+	
+}
+textarea{
+	margin-right: 1%;
+	line-height: 30px;
+	padding-left: 1em;
+}
+input[type="submit"]{
+	padding: 0;
+	border: none;
+	outline: none;
+	background-color:  rgba(136,108,94,.7);
+	transition: background .5s,border-radius .5s,color .5s;
+}
+input[type="submit"]:hover{
+	background-color: rgba(136,108,94,.9);
+	color: #fff;
+	border-radius: 0;
+}
+footer p{
+	text-align: center;
 }
 
