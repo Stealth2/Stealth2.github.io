@@ -21,19 +21,44 @@ header{
 	width: 100%;
 	padding: 20px 0px;
 	background-color: rgba(0,0,0,.1);
+	position: fixed;
 }
 .center{
 	width: 1200px;
 	margin: auto;
+}	
+header a{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+	transition: color .5s; 
 }
-
+header ul li a:hover{
+	color: #339BEB;
+}
 header .logo{
 	float: left;
 }
 header .top{
 	float: right;
 }
+header .top ul{
+	margin-top:25px ;
+}
 header .top ul li{
 	float: left;
 	margin: 0 20px;
+}
+
+header .logo span,
+header .logo img{
+	vertical-align: middle;
+}
+header .logo span{
+	font-size: 60px;
+	font-family: "楷体";
+}
+.banner{
+	min-height: 600px;
+	background: url(../img/banner.jpg) no-repeat center top;
+	
 }
