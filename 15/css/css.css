@@ -1,0 +1,39 @@
+*{
+	box-sizing: border-box;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	/*color: #fff;*/
+}
+body{
+	margin: 0;
+}
+header{
+	width: 100%;
+	padding: 20px 0px;
+	background-color: rgba(0,0,0,.1);
+}
+.center{
+	width: 1200px;
+	margin: auto;
+}
+
+header .logo{
+	float: left;
+}
+header .top{
+	float: right;
+}
+header .top ul li{
+	float: left;
+	margin: 0 20px;
+}
