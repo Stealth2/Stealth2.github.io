@@ -1,0 +1,284 @@
+*{
+	box-sizing: border-box;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	/*color: #fff;*/
+}
+body{
+	margin: 0;
+	min-height: 1200px;
+}
+header{
+	width: 100%;
+	padding: 20px 0px;
+	background-color: rgba(0,0,0,.0);
+	position: fixed;
+	transition:padding .5s,background-color .5s;
+}
+header.on{
+	padding: 5px 0px;
+	background-color: rgba(0,0,0,0.6);
+}
+.center{
+	width: 1200px;
+	margin: auto;
+	padding: 1px;
+}	
+header a{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+	transition: color .5s; 
+}
+header ul li a:hover{
+	color: #339BEB;
+}
+header .logo{
+	float: left;
+}
+header .top{
+	float: right;
+}
+header .top ul{
+	margin-top:25px ;
+}
+header .top ul li{
+	float: left;
+	margin: 0 20px;
+}
+
+header .logo span,
+header .logo img{
+	vertical-align: middle;
+}
+header .logo span{
+	font-size: 60px;
+	font-family: "楷体";
+}
+.banner{
+	min-height: 600px;
+	background: url(../img/banner.jpg) no-repeat center top;
+	color: #fff;
+	line-height: 1.5em;
+}
+.banner .center{
+	width: 800px;
+	height: 180px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	font-family: "微软雅黑";
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+
+.banner .center h1{
+	text-align: center;
+	font-size: 35px;
+}
+.banner .center h1 strong{
+	color: #339BEB;
+}
+.banner .center p strong{
+	background-color:rgba(255,255,255,.5);
+	color:#000;
+	padding: 3px;
+	font-weight: normal;
+	
+}
+section h2{
+	text-align: center;
+	margin-top: 50px;
+}
+section h2+p{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.about .img{
+	float: left;
+	width: 48%;
+}
+.about .img img{
+	width: 100%;
+}
+.about .note{
+	float: right;
+	width: 48%;
+	line-height: 2;
+}
+.about .note p:first-child{
+	margin-top: 0;
+}
+.about .note ol{
+	list-style: none;
+	padding: 0;
+	margin: 20px 0;
+	counter-reset:ct;
+}
+.about .note li{
+	counter-increment: ct;
+}
+.about .note li::before{
+	content: counter(ct);
+	width: 20px;
+	height: 20px;
+	border: 1px dashed #000;
+	border-radius: 20px;
+	text-align: center;
+	line-height: 20px;
+	display: inline-block;
+	margin-right: 10px;
+	transition: transform .5s;
+	cursor: pointer;
+}
+.about .note li:hover::before{
+	transform: translate(10px) rotate(360deg);
+}
+.service li{
+	width: 48%;
+	float: left;
+	text-align: right;
+	line-height: 2;
+	height: 80px;
+	margin: 40px 0px;
+	cursor: pointer;
+}
+.service li::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.service li:nth-child(2n){
+	float: right;
+	text-align: left;
+}
+.service li i{
+	float: right;
+	padding: 12px 0px 5px 30px;
+	transition: transform .5s;
+}
+.service li:nth-child(2n) i{
+	float: left;
+	padding: 12px 30px 5px 0px;
+}
+.service li:hover i{
+	transform: scale(1.2);
+}
+.service li h3{
+	display: inline-block;
+	margin: 0;
+}
+.service{
+	background: url(../img/sever.jpg) center center;
+	background-size: cover;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+.case figure{
+	float: left;
+	overflow: hidden;
+	width: 24%;
+	margin: 10px calc(4% / 3) 10px 0px;
+	position: relative;
+	cursor: pointer;
+}
+.case figure:nth-child(4n){
+	margin-right: 0px;
+}
+.case figure img{
+	width: 100%;
+	height: auto;
+	transform: scale(1) rotate(0deg);
+	transition: transform .5s;
+	vertical-align: top;
+}
+.case figure:hover img{
+	transform: scale(1.2) rotate(3deg);
+}
+.case figure figcaption{
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	top: 40%;
+	bottom: 20%;
+	background-color: rgba(255,255,255,.8);
+	padding: 10px;
+}
+.case figure figcaption .time{
+	position: absolute;
+	width: 50px;
+	height: 38px;
+	background-color:#339BEB;
+	font-size: 0.8em;
+	text-align: center;
+	line-height: 19px;
+}
+.case figure figcaption .time .month{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.case figure figcaption h3{
+	margin: 5px 0px 0px 100px;
+}
+.case figure figcaption p{
+	font-size: 0.8em;
+	line-height: 1.5;
+}
+.case figure figcaption .data{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	font-size: 0.8em;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	background-color: rgba(0,0,0,.2);
+	text-align: right;
+}
+.case figure figcaption .data *{
+	padding: 0px 2px;
+}
+.contact{
+	background: url(../img/link.jpg) no-repeat center top;
+	background-size: cover;
+	color: #fff;
+}
+.contact .left{
+	width: 48%;
+	float: left;
+	margin-right: 4%;
+}
+.contact .left p{
+	margin-top: 0px;
+}
+.contact li i{
+	padding: 0px 10px 0px 0px;
+}
+.contact .right{
+	float: right;
+	width: 48%;
+	margin-right: 0%;
+}
+.contact .right input,
+.contact .right textarea{
+	width: 100%;
+	padding: 10px 16px;
+	margin: 10px 0;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	background: rgba(255,255,255,0.6);
+}
+footer p{
+	text-align: center;
+}
