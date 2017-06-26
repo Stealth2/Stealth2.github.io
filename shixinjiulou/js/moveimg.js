@@ -1,7 +1,7 @@
 //---------主角：轮播图函数-------------
    var aHeight=window.screen.availHeight;
    var oDiv=document.getElementById('slideshow');
-   oDiv.style.height=aHeight-134+'px';
+   oDiv.style.height=aHeight*0.92-60+'px';
 function slideshow() {
   var slideshow=document.getElementById("slideshow"),
   imgs=slideshow.getElementsByTagName("img"), //得到图片们

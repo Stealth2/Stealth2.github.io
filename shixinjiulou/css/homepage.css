@@ -64,24 +64,7 @@ header{
 .menu ul li:hover a{
 	color:#fff;
 }
-.menu li.bottom{
-	width: 40px;
-	height: 3px;
-	background-color: #ff5c00;
-	position:absolute;
-	bottom: 0px;
-	left: 140px;
-	transition:left .5s;
-}
-.menu li:nth-child(1):hover~li.bottom{
-	left:40px;
-}
-.menu li:nth-child(3):hover~li.bottom{
-	left: 240px;
-}
-.menu li:nth-child(4):hover~li.bottom{
-	left:340px;
-}
+
 /*main*/
 section{
 	width: 100%;
