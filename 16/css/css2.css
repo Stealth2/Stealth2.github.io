@@ -1,0 +1,9 @@
+body{
+	
+	background: url(../img/02.jpg) no-repeat ;
+	background-size: 100%;
+}
+p{
+	font-size: 30px;
+	color: white;
+}
