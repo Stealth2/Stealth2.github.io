@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+				table{
+					border: 1px solid #000;
+					width: 500px;
+					height: 500px;
+					border-collapse: collapse;
+				}
+				td{
+					border: 1px solid #000;
+					
+				}
+				input{
+					margin: 14px;
+				}
+				
+		</style>
+	</head>
+	<body>
+		<input type="button" name="all" id="all" value="所有变色" />
+		<input type="button" name="interval" id="interval" value="行色渐变" />
+		<input type="button" name="line" id="line" value="隔行变色" />
+		<input type="button" name="vertical" id="vertical" value="隔列渐变" />
+		<input type="button" name="random" id="random" value="随机渐变" />
+		<table id="table">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+		var oTd = document.querySelectorAll("td");
+		var oAll =document.getElementById("all");
+		var oInterval =document.getElementById("interval");
+		var oLine =document.getElementById("line");
+		var oVertical =document.getElementById("vertical");
+		var oRandom =document.getElementById("random");
+				
+					oAll.onclick=function() {
+						for(i=0;i<oTd.length;i++){
+						oTd[i].style.background = "hsla(" + i * 2 + ",50%,50%,.5)";
+							}
+						}
+					oInterval.onclick=function() {
+						for(i=0;i<oTd.length;i++){
+						 oTd[i].style.background="hsla("+(i%10)*20+",50%,50%,.5)";
+							}
+						}
+					oLine.onclick=function() {
+						for(i=0;i<oTd.length;i++){
+						oTd[i].style.background="hsla("+((i%10)%2)*145+",50%,50%,.5)";	
+							}
+						}
+					oVertical.onclick=function() {
+						for(i=0;i<oTd.length;i++){
+							oTd[i].style.background="hsla("+((i/10)%2+1)*90+",50%,50%,.5)";
+							}
+						}
+					oRandom.onclick=function() {
+						for(i=0;i<oTd.length;i++){
+							var k=parseInt(Math.random()*10);
+						oTd[i].style.background = "hsla(" + k * 36 + ",50%,50%,.5)";
+							}
+					}
+					
+
+		</script>
+	</body>
+</html>
