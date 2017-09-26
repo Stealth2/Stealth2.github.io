@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		body{
+			background: url(img/背景.jpg);
+		}
+			#again{
+				display: none;
+			}
+			#page1{
+				display: none;
+				width: 400px;
+				margin: auto ;
+				text-align: center;
+				
+			}
+			#page1 input{
+				cursor: pointer;				
+			}
+			#page1 div{
+				text-align: left;
+				margin-left:88px ;
+				margin-top: 5px;
+			}
+			#page2{
+				width: 200px;
+				margin: auto;
+				text-align: center;
+			}
+			#page2 input{
+				padding: 0;
+				width: 200px;
+				height: 50px;
+				margin: 10px 0 10px 0;
+				font-size: 20px;
+				background: none;
+				border: 1px solid #000;
+				border-radius: 30px;
+				cursor: pointer;
+			}
+			#Return{
+				margin-left: 158px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="page1">
+			<h2>猜数字游戏</h2>
+			<input type="number" name="num" id="num" min="0" />
+			<input type="button"  name="input" id="input" value="提交" />
+			<input type="button" name="again" id="again" value="重来" />
+			<div class="times">剩余次数：<span></span><br></div>
+			<div class="info"> 猜测历史：<br><span></span></div>
+			<input type="button" name="Return" id="Return" value="返回" />
+		</div>
+		<div id="page2">
+			<h2>猜数字游戏</h2>
+			<input type="button" name="easy" id="easy" value="简单" /><br>
+			<input type="button" name="Medium" id="Medium" value="中等" /><br>
+			<input type="button" name="difficulty" id="difficulty" value="困难" /><br>
+		</div>
+			<script type="text/javascript">
+				var maths
+				var rdnum 
+				var gstimes=6;
+				var opage1=document.getElementById("page1");
+				var opage2=document.getElementById("page2");
+				var oeasy=document.getElementById("easy");
+				var omedium=document.getElementById("Medium")
+				var odifficulty=document.getElementById("difficulty")
+				var otext=document.getElementById("num");
+				var oinput =document.getElementById("input");
+				var oagain =document.getElementById("again");
+				var	oTimes=document.querySelector(".times span");
+			    var	oInfo=document.querySelector(".info span");
+				var oreturn=document.getElementById("Return");
+				oreturn.onclick=function(){
+					opage1.style.display="none";
+					opage2.style.display="block";
+				}
+				oeasy.onclick=function(){
+					maths=10;
+					opage1.style.display="block";
+					opage2.style.display="none";
+					otext.placeholder="0-"+maths+"整数,6次机会";
+					rdnum =parseInt(Math.random()*(maths+1));
+				}
+				omedium.onclick=function(){
+					maths=50;
+					opage1.style.display="block";
+					opage2.style.display="none";
+					otext.placeholder="0-"+maths+"整数,6次机会";
+					rdnum =parseInt(Math.random()*(maths+1));
+				}
+				odifficulty.onclick=function(){
+					maths=100;
+					opage1.style.display="block";
+					opage2.style.display="none";
+					otext.placeholder="0-"+maths+"整数,6次机会";
+					rdnum =parseInt(Math.random()*(maths+1));
+				}
+				oinput.addEventListener('click',clickI);
+				oagain.addEventListener('click',clickA);
+				oTimes.innerHTML=gstimes;
+				function gameover () {
+					otext.disabled=true;
+					oinput.style.display="none";
+					oagain.style.display="inline-block"
+				}
+				function again () {
+					
+				}
+				function clickI () {
+						gstimes--;
+						oTimes.innerHTML=gstimes;
+						if (rdnum<otext.value) {
+							oInfo.innerHTML+="这次猜的"+otext.value+",有点偏大<br>";
+						}
+						else if(rdnum>otext.value){
+							oInfo.innerHTML+="这次猜的"+otext.value+",有点偏小<br>";
+						}
+						else if(rdnum==otext.value){
+							oInfo.innerHTML+="恭喜猜对了，正确答案正是"+rdnum+"。<br>";
+							gameover();
+						}
+						if (gstimes<=0) {
+							oInfo.innerHTML+="Game Over"
+							gameover();
+						}
+						otext.value="";	
+					}
+				function clickA () {
+					rdnum =parseInt(Math.random()*(maths+1));
+					otext.disabled=false;
+					gstimes=6;
+					oTimes.innerHTML=gstimes;
+					oinput.style.display="inline-block";
+					oagain.style.display="none"
+					oInfo.innerHTML="游戏已重新开始，请竞猜<br>"
+				}
+				
+			</script>
+		
+	</body>
+</html>
