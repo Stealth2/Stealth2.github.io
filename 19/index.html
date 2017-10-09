@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/a.css"/>
+		<style type="text/css">
+			input{
+				text-align: center;
+			}
+			div{
+				width:600px;
+				height: 380px;
+				margin: auto;
+				border: 1px solid #000;
+				background: url(img/01.jpg);
+				background-repeat: no-repeat;
+				text-align: center;
+			}
+			.btn{
+				width: 100px;
+				height: 30px;
+				margin: 25px;
+				background: none;
+				outline:none;
+				border-radius: 30px;
+				border: 1px solid #000;
+				cursor: pointer;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a">
+			<h2>抽奖游戏</h2>
+			<h4>一等奖</h4>
+			<input type="text" name="text" class="text" value="" />
+			<h4>二等奖</h4>
+			<input type="text" name="text" class="text" value="" />
+			<input type="text" name="text" class="text" value="" />
+			<h4>三等奖</h4>
+			<input type="text" name="text" class="text" value="" />
+			<input type="text" name="text" class="text" value="" />
+			<input type="text" name="text" class="text" value="" /><br />
+			<input class="btn" type="button" name="button" id="button" value="抽奖" />
+			<input class="btn" type="button" name="button2" id="button2" value="停止" />
+		</div>
+	</body>
+	<script type="text/javascript">
+		var text=document.getElementsByClassName("text");
+		var n=[];
+		var x=[];
+		var i;
+		var j;
+		var a;
+		var button=document.getElementById("button");
+		var button2=document.getElementById("button2");
+		for(i=1;i<47;i++){
+			x[i-1]=i;
+		}
+		button.addEventListener("click",go);
+		button2.addEventListener("click",stop);
+		function fang () {
+			for(i=0;i<6;i++){
+				n[i]=Math.floor(Math.random()*46+1);
+				for(j=0;j<i;j++){
+					if(n[j]==n[i]){
+						i--;
+					}
+				}
+			}	
+			for (i=0;i<6;i++) {
+				text[i].value=n[i];
+			}
+		}
+		function go(){
+			a=setInterval("fang()",100);
+		}
+		function stop(){
+			window.clearInterval(a);
+		}
+	</script>
+</html>
