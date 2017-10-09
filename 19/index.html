@@ -52,7 +52,7 @@
 		var x=[];
 		var i;
 		var j;
-		var a;
+		var a=0;
 		var button=document.getElementById("button");
 		var button2=document.getElementById("button2");
 		for(i=1;i<47;i++){
@@ -74,10 +74,12 @@
 			}
 		}
 		function go(){
+			if(a==0)
 			a=setInterval("fang()",100);
 		}
 		function stop(){
 			window.clearInterval(a);
+			a=0;
 		}
 	</script>
 </html>
