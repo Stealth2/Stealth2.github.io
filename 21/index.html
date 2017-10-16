@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			div{
+				border: 3px solid #fff;
+				width: 500px;
+				height: 300px;
+				margin: auto;
+			}
+			body {
+				margin: 0 auto;
+				background-color:rgba(0,0,0,.8);
+			}
+			
+			h1 {
+				font-size: 4em;
+				text-align: center;
+				color: #FFFFFF;
+			}
+			
+			h2 {
+				font-size: 2em;
+				text-align: center;
+				color: #FFFFFF;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="bord">
+			<h1 id="title"> 庆哥不帅</h1>
+			<h2 id="title2">不是鄢滟麟说的，真的不是</h2>
+		</div>
+		<script type="text/javascript">
+			var title = document.getElementById('title');
+			var i = 0;
+			var arry = title.innerText;
+			title.innerHTML = "";
+
+			function one() {
+				if(i < arry.length) {
+					title.innerText += arry[i];
+				}
+				i++;
+			}
+			setInterval(one, 500);
+			var title2 = document.getElementById('title2');
+			var arry1 = title2.innerText;
+			title2.innerHTML = "";
+			var a = 0;
+
+			function two() {
+				if(a < arry1.length) {
+					title2.innerText += arry1[a];
+				} else {
+					a = -1;
+					title2.innerHTML = "";
+				}
+				a++;
+			}
+			setInterval(two, 200);
+		</script>
+	</body>
+
+</html>
