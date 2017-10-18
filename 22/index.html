@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				background: skyblue;
+			}
+			div{
+				width: 400px;
+				margin: auto;
+				text-align: center;
+			}
+			#btn{
+				height: 50px;
+				width: 50px;
+				border: 2px dashed #000;
+				border-radius: 50px;
+				background: rgba(255,255,255,.8);
+				outline:none;
+				cursor: pointer;	
+			}
+			#text{
+				margin: 10px;
+				width: 300px;
+				height: 300px;
+				text-align: center;
+				border: 3px dashed #000;
+				border-radius:150px;
+				font-size: 30px;
+				background: rgba(255,255,255,.8);
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		<input id="btn" type="button" class="button" value="1" />
+		<input id="btn" type="button" class="button" value="2" />
+		<input id="btn" type="button" class="button" value="3" />
+		<input id="btn" type="button" class="button" value="4" />
+		<input id="btn" type="button" class="button" value="5" /><br>
+		<input type="text" id="text" value="" />
+		</div>
+		<script type="text/javascript">
+			var button=document.getElementsByClassName("button");
+			var i=0;
+			var text=document.getElementById("text");
+			for (i=0;i<5;i++) {
+				button[i].addEventListener("click",function(i) {
+					return function(){text.value="你点击的是"+i+"号按钮"};
+				}(i+1));
+			}
+		</script>
+	</body>
+</html>
